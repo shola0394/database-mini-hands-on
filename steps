@@ -1,4 +1,4 @@
-we going to atach some screen shot so you guys can see it working
+
 this will guide you crate and run a mysql database instance , an ec2 and connect them within each other  through the command line interface in a way that  the ec2 can access the database 
 
 Scenario 1: Creating a MySQL database and connecting a Linux EC2 instance to it using CLI
