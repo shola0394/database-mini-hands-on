@@ -1,1 +1,41 @@
 we going to atach some screen shot so you guys can see it working
+this will guide you crate and run a mysql database instance , an ec2 and connect them within each other  through the command line interface in a way that  the ec2 can access the database 
+
+Scenario 1: Creating a MySQL database and connecting a Linux EC2 instance to it using CLI
+
+Step 1: Create a MySQL RDS instance
+
+Login to the AWS Management Console
+Navigate to RDS
+Click on "Create Database"
+Select "MySQL" as the engine type
+Choose a version of MySQL
+Choose the desired database size and storage
+Enter the database credentials
+Configure additional settings such as VPC, security group, backup options, etc.
+Launch the database instance
+Step 2: Configure Security Group
+
+Navigate to the EC2 Dashboard
+Select the EC2 instance that will be connecting to the MySQL database
+Click on "Actions" and select "Networking" and then "Change Security Groups"
+Create a new security group and allow incoming traffic from the RDS instance's security group on port 3306.
+Step 3: Install MySQL client on EC2 instance
+
+Connect to the EC2 instance using SSH
+
+Install MySQL client using the following command:
+
+sql
+Copy code
+sudo yum update
+sudo yum install mysql-client
+
+Step 4: Connect to the MySQL RDS instance from EC2 instance
+
+Obtain the RDS instance endpoint from the RDS dashboard
+
+Connect to the MySQL instance using the following command: mysql -h <endpoint> -u <username> -p
+Enter the database password when prompted
+
+ and you done
